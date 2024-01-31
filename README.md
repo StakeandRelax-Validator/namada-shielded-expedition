@@ -13,7 +13,7 @@ chmod +x install_node.sh
 
 sed -i 's/127.0.0.1:26657/0.0.0.0:26657/g' .local/share/namada/shielded-expedition.b40d8e9055/config.toml
 
-#riavviate il nodo
+# riavviate il nodo
 sudo systemctl restart namadad
 
 # per poi importare il vostro wallet, dovete eseguire questo comando (cambiate "wallet" con quello che volete)
