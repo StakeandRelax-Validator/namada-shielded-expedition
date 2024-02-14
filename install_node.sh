@@ -18,9 +18,9 @@ if ss -tulpen | awk '{print $5}' | grep -q ":26656$" ; then
 else
         echo ""
 fi
-NAMADA_TAG="v0.31.0"
+NAMADA_TAG="v0.31.4"
 #TM_HASH="v0.1.4-abciplus"
-NAMADA_CHAIN_ID="shielded-expedition.b40d8e9055"
+NAMADA_CHAIN_ID="shielded-expedition.88f17d1d14"
 rm -rf $HOME/.masp-params
 
 if [ ! $VALIDATOR_ALIAS ]; then
