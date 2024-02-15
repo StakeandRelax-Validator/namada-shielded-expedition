@@ -1,0 +1,198 @@
+hermes create channel --b-chain  shielded-expedition.88f17d1d14 --b-port transfer --a-chain osmo-test-5 --a-port transfer --new-client-connection
+
+
+CREATE OSMOSIS CHANNEL
+2024-02-14T09:55:28.944967Z  INFO ThreadId(01) Creating new clients, new connection, and a new channel with order ORDER_UNORDERED
+2024-02-14T09:55:33.185074Z  INFO ThreadId(01) foreign_client.create{client=shielded-expedition.88f17d1d14->osmo-test-5:07-tendermint-0}: 🍭 client was created successfully id=07-tendermint-1968
+2024-02-14T09:55:58.636395Z  INFO ThreadId(01) foreign_client.create{client=osmo-test-5->shielded-expedition.88f17d1d14:07-tendermint-0}: 🍭 client was created successfully id=07-tendermint-163
+2024-02-14T09:56:02.056492Z  INFO ThreadId(01) 🥂 osmo-test-5 => OpenInitConnection(OpenInit { Attributes { connection_id: connection-1920, client_id: 07-tendermint-1968, counterparty_connection_id: None, counterparty_client_id: 07-tendermint-163 } }) at height 5-5380330
+2024-02-14T09:56:35.811182Z  INFO ThreadId(01) 🥂 shielded-expedition.88f17d1d14 => OpenTryConnection(OpenTry { Attributes { connection_id: connection-60, client_id: 07-tendermint-163, counterparty_connection_id: connection-1920, counterparty_client_id: 07-tendermint-1968 } }) at height 0-13009
+2024-02-14T09:57:10.050924Z  INFO ThreadId(01) 🥂 osmo-test-5 => OpenAckConnection(OpenAck { Attributes { connection_id: connection-1920, client_id: 07-tendermint-1968, counterparty_connection_id: connection-60, counterparty_client_id: 07-tendermint-163 } }) at height 5-5380347
+2024-02-14T09:57:29.131319Z  INFO ThreadId(01) 🥂 shielded-expedition.88f17d1d14 => OpenConfirmConnection(OpenConfirm { Attributes { connection_id: connection-60, client_id: 07-tendermint-163, counterparty_connection_id: connection-1920, counterparty_client_id: 07-tendermint-1968 } }) at height 0-13014
+2024-02-14T09:57:32.193834Z  INFO ThreadId(01) connection handshake already finished for Connection { delay_period: 0ns, a_side: ConnectionSide { chain: BaseChainHandle { chain_id: osmo-test-5 }, client_id: 07-tendermint-1968, connection_id: connection-1920 }, b_side: ConnectionSide { chain: BaseChainHandle { chain_id: shielded-expedition.88f17d1d14 }, client_id: 07-tendermint-163, connection_id: connection-60 } }
+2024-02-14T09:57:34.292620Z  INFO ThreadId(01) 🎊  osmo-test-5 => OpenInitChannel(OpenInit { port_id: transfer, channel_id: channel-5555, connection_id: None, counterparty_port_id: transfer, counterparty_channel_id: None }) at height 5-5380353
+2024-02-14T09:58:01.127411Z  INFO ThreadId(01) 🎊  shielded-expedition.88f17d1d14 => OpenTryChannel(OpenTry { port_id: transfer, channel_id: channel-39, connection_id: connection-60, counterparty_port_id: transfer, counterparty_channel_id: channel-5555 }) at height 0-13017
+2024-02-14T09:58:14.063455Z  INFO ThreadId(01) 🎊  osmo-test-5 => OpenAckChannel(OpenAck { port_id: transfer, channel_id: channel-5555, connection_id: connection-1920, counterparty_port_id: transfer, counterparty_channel_id: channel-39 }) at height 5-5380363
+2024-02-14T09:58:33.523850Z  INFO ThreadId(01) 🎊  shielded-expedition.88f17d1d14 => OpenConfirmChannel(OpenConfirm { port_id: transfer, channel_id: channel-39, connection_id: connection-60, counterparty_port_id: transfer, counterparty_channel_id: channel-5555 }) at height 0-13020
+2024-02-14T09:58:36.580483Z  INFO ThreadId(01) channel handshake already finished for Channel { ordering: ORDER_UNORDERED, a_side: ChannelSide { chain: BaseChainHandle { chain_id: osmo-test-5 }, client_id: 07-tendermint-1968, connection_id: connection-1920, port_id: transfer, channel_id: channel-5555, version: None }, b_side: ChannelSide { chain: BaseChainHandle { chain_id: shielded-expedition.88f17d1d14 }, client_id: 07-tendermint-163, connection_id: connection-60, port_id: transfer, channel_id: channel-39, version: None }, connection_delay: 0ns }
+SUCCESS Channel {
+    ordering: Unordered,
+    a_side: ChannelSide {
+        chain: BaseChainHandle {
+            chain_id: ChainId {
+                id: "osmo-test-5",
+                version: 5,
+            },
+            runtime_sender: Sender { .. },
+        },
+        client_id: ClientId(
+            "07-tendermint-1968",
+        ),
+        connection_id: ConnectionId(
+            "connection-1920",
+        ),
+        port_id: PortId(
+            "transfer",
+        ),
+        channel_id: Some(
+            ChannelId(
+                "channel-5555",
+            ),
+        ),
+        version: None,
+    },
+    b_side: ChannelSide {
+        chain: BaseChainHandle {
+            chain_id: ChainId {
+                id: "shielded-expedition.88f17d1d14",
+                version: 0,
+            },
+            runtime_sender: Sender { .. },
+        },
+        client_id: ClientId(
+            "07-tendermint-163",
+        ),
+        connection_id: ConnectionId(
+            "connection-60",
+        ),
+        port_id: PortId(
+            "transfer",
+        ),
+        channel_id: Some(
+            ChannelId(
+                "channel-39",
+            ),
+        ),
+        version: None,
+    },
+    connection_delay: 0ns,
+}
+
+
+
+CREATE UNI-6 CHANNEL
+2024-02-14T09:59:58.605187Z  INFO ThreadId(01) Creating new clients, new connection, and a new channel with order ORDER_UNORDERED
+2024-02-14T10:00:03.168036Z  INFO ThreadId(01) foreign_client.create{client=shielded-expedition.88f17d1d14->uni-6:07-tendermint-0}: 🍭 client was created successfully id=07-tendermint-745
+2024-02-14T10:00:19.895216Z  INFO ThreadId(01) foreign_client.create{client=uni-6->shielded-expedition.88f17d1d14:07-tendermint-0}: 🍭 client was created successfully id=07-tendermint-164
+2024-02-14T10:00:22.450059Z  INFO ThreadId(01) 🥂 uni-6 => OpenInitConnection(OpenInit { Attributes { connection_id: connection-829, client_id: 07-tendermint-745, counterparty_connection_id: None, counterparty_client_id: 07-tendermint-164 } }) at height 6-7977478
+2024-02-14T10:00:31.441269Z  WARN ThreadId(01) client consensus proof height too high, waiting for destination chain to advance beyond 0-13030
+2024-02-14T10:00:31.944554Z  WARN ThreadId(01) client consensus proof height too high, waiting for destination chain to advance beyond 0-13030
+2024-02-14T10:00:54.147839Z  INFO ThreadId(01) 🥂 shielded-expedition.88f17d1d14 => OpenTryConnection(OpenTry { Attributes { connection_id: connection-61, client_id: 07-tendermint-164, counterparty_connection_id: connection-829, counterparty_client_id: 07-tendermint-745 } }) at height 0-13033
+2024-02-14T10:01:28.874820Z  INFO ThreadId(01) 🥂 uni-6 => OpenAckConnection(OpenAck { Attributes { connection_id: connection-829, client_id: 07-tendermint-745, counterparty_connection_id: connection-61, counterparty_client_id: 07-tendermint-164 } }) at height 6-7977502
+2024-02-14T10:01:47.376071Z  INFO ThreadId(01) 🥂 shielded-expedition.88f17d1d14 => OpenConfirmConnection(OpenConfirm { Attributes { connection_id: connection-61, client_id: 07-tendermint-164, counterparty_connection_id: connection-829, counterparty_client_id: 07-tendermint-745 } }) at height 0-13038
+2024-02-14T10:01:50.433714Z  INFO ThreadId(01) connection handshake already finished for Connection { delay_period: 0ns, a_side: ConnectionSide { chain: BaseChainHandle { chain_id: uni-6 }, client_id: 07-tendermint-745, connection_id: connection-829 }, b_side: ConnectionSide { chain: BaseChainHandle { chain_id: shielded-expedition.88f17d1d14 }, client_id: 07-tendermint-164, connection_id: connection-61 } }
+2024-02-14T10:01:53.873327Z  INFO ThreadId(01) 🎊  uni-6 => OpenInitChannel(OpenInit { port_id: transfer, channel_id: channel-891, connection_id: None, counterparty_port_id: transfer, counterparty_channel_id: None }) at height 6-7977510
+2024-02-14T10:02:19.591959Z  INFO ThreadId(01) 🎊  shielded-expedition.88f17d1d14 => OpenTryChannel(OpenTry { port_id: transfer, channel_id: channel-40, connection_id: connection-61, counterparty_port_id: transfer, counterparty_channel_id: channel-891 }) at height 0-13041
+2024-02-14T10:02:33.541265Z  INFO ThreadId(01) 🎊  uni-6 => OpenAckChannel(OpenAck { port_id: transfer, channel_id: channel-891, connection_id: connection-829, counterparty_port_id: transfer, counterparty_channel_id: channel-40 }) at height 6-7977525
+2024-02-14T10:02:52.420940Z  INFO ThreadId(01) 🎊  shielded-expedition.88f17d1d14 => OpenConfirmChannel(OpenConfirm { port_id: transfer, channel_id: channel-40, connection_id: connection-61, counterparty_port_id: transfer, counterparty_channel_id: channel-891 }) at height 0-13044
+2024-02-14T10:02:55.478133Z  INFO ThreadId(01) channel handshake already finished for Channel { ordering: ORDER_UNORDERED, a_side: ChannelSide { chain: BaseChainHandle { chain_id: uni-6 }, client_id: 07-tendermint-745, connection_id: connection-829, port_id: transfer, channel_id: channel-891, version: None }, b_side: ChannelSide { chain: BaseChainHandle { chain_id: shielded-expedition.88f17d1d14 }, client_id: 07-tendermint-164, connection_id: connection-61, port_id: transfer, channel_id: channel-40, version: None }, connection_delay: 0ns }
+SUCCESS Channel {
+    ordering: Unordered,
+    a_side: ChannelSide {
+        chain: BaseChainHandle {
+            chain_id: ChainId {
+                id: "uni-6",
+                version: 6,
+            },
+            runtime_sender: Sender { .. },
+        },
+        client_id: ClientId(
+            "07-tendermint-745",
+        ),
+        connection_id: ConnectionId(
+            "connection-829",
+        ),
+        port_id: PortId(
+            "transfer",
+        ),
+        channel_id: Some(
+            ChannelId(
+                "channel-891",
+            ),
+        ),
+        version: None,
+    },
+    b_side: ChannelSide {
+        chain: BaseChainHandle {
+            chain_id: ChainId {
+                id: "shielded-expedition.88f17d1d14",
+                version: 0,
+            },
+            runtime_sender: Sender { .. },
+        },
+        client_id: ClientId(
+            "07-tendermint-164",
+        ),
+        connection_id: ConnectionId(
+            "connection-61",
+        ),
+        port_id: PortId(
+            "transfer",
+        ),
+        channel_id: Some(
+            ChannelId(
+                "channel-40",
+            ),
+        ),
+        version: None,
+    },
+    connection_delay: 0ns,
+}
+
+
+
+
+namadac ibc-transfer --channel-id channel-39 --memo tpknam1qrfdawuufjn07vdq2exy6h5djfsel8254452avz6auxdw9y7r3kpcdz7zcz --source mynamkey --token tnam1qxvg64psvhwumv3mwrrjfcz0h3t3274hwggyzcee --receiver osmo1gg2z9nzqufue0saz8auksjxfn43d6u9vazegg4 --amount 1
+Enter your decryption password:
+Transaction added to mempool.
+Wrapper transaction hash: 19CB413294989E849C50C3D61BED5F47879B02E55842A0C9C79532F2AA30DA5F
+Inner transaction hash: FD711F827E4CC73FB1BAD76CFBB8F926635608FBE28593544214ABCDD9776D65
+Wrapper transaction accepted at height 13141. Used 26 gas.
+Waiting for inner transaction result...
+Transaction was successfully applied at height 13142. Used 6193 gas.
+
+
+
+2024-02-14T10:20:35.890365Z  INFO ThreadId(92) worker.batch{chain=shielded-expedition.88f17d1d14}:supervisor.handle_batch{chain=shielded-expedition.88f17d1d14}:supervisor.process_batch{chain=shielded-expedition.88f17d1d14}:worker.packet.cmd{src_chain=shielded-expedition.88f17d1d14 src_port=transfer src_channel=channel-39 dst_chain=osmo-test-5}: clearing packets
+2024-02-14T10:20:35.959034Z  INFO ThreadId(92) worker.batch{chain=shielded-expedition.88f17d1d14}:supervisor.handle_batch{chain=shielded-expedition.88f17d1d14}:supervisor.process_batch{chain=shielded-expedition.88f17d1d14}:worker.packet.cmd{src_chain=shielded-expedition.88f17d1d14 src_port=transfer src_channel=channel-39 dst_chain=osmo-test-5}:schedule_packet_clearing{height=Some(Height { revision: 0, height: 13142 })}:relay_pending_packets{height=Some(Height { revision: 0, height: 13141 })}:schedule_recv_packet_and_timeout_msgs{query_height=0-13141}: pulled packet data for 0 events out of 1 sequences: 3..=3; events.total=1 events.left=0
+2024-02-14T10:20:47.027032Z  INFO ThreadId(92) worker.batch{chain=shielded-expedition.88f17d1d14}:supervisor.handle_batch{chain=shielded-expedition.88f17d1d14}:supervisor.process_batch{chain=shielded-expedition.88f17d1d14}:worker.packet.cmd{src_chain=shielded-expedition.88f17d1d14 src_port=transfer src_channel=channel-39 dst_chain=osmo-test-5}:relay{odata=86f67f37 ->Destination @0-13142; len=1}: assembled batch of 2 message(s)
+2024-02-14T10:20:47.414513Z  INFO ThreadId(92) worker.batch{chain=shielded-expedition.88f17d1d14}:supervisor.handle_batch{chain=shielded-expedition.88f17d1d14}:supervisor.process_batch{chain=shielded-expedition.88f17d1d14}:worker.packet.cmd{src_chain=shielded-expedition.88f17d1d14 src_port=transfer src_channel=channel-39 dst_chain=osmo-test-5}:relay{odata=86f67f37 ->Destination @0-13142; len=1}: response(s): 1; Ok:19AAFB7E4695951D432E2B2B7A64A1456084ED7422B332846F84B97D3D91C666 target_chain=osmo-test-5
+2024-02-14T10:20:47.414538Z  INFO ThreadId(92) worker.batch{chain=shielded-expedition.88f17d1d14}:supervisor.handle_batch{chain=shielded-expedition.88f17d1d14}:supervisor.process_batch{chain=shielded-expedition.88f17d1d14}:worker.packet.cmd{src_chain=shielded-expedition.88f17d1d14 src_port=transfer src_channel=channel-39 dst_chain=osmo-test-5}:relay{odata=86f67f37 ->Destination @0-13142; len=1}: submitted
+2024-02-14T10:20:53.152453Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}: clearing packets
+2024-02-14T10:20:53.393142Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:schedule_packet_clearing{height=Some(Height { revision: 5, height: 5380701 })}:relay_pending_packets{height=Some(Height { revision: 5, height: 5380700 })}:build_packet_ack_msgs{query_height=5-5380700}: pulled packet data for 0 events out of 1 sequences: 3..=3; events.total=1 events.left=0
+2024-02-14T10:20:53.402259Z  INFO ThreadId(35) spawn:chain{chain=osmo-test-5}:client{client=07-tendermint-1968}:connection{connection=connection-1920}:channel{channel=channel-5555}:worker.client.misbehaviour{client=07-tendermint-1968 src_chain=shielded-expedition.88f17d1d14 dst_chain=osmo-test-5}:foreign_client.detect_misbehaviour_and_submit_evidence{client=shielded-expedition.88f17d1d14->osmo-test-5:07-tendermint-1968}:foreign_client.detect_misbehaviour{client=shielded-expedition.88f17d1d14->osmo-test-5:07-tendermint-1968}: No evidence of misbehavior detected for chain shielded-expedition.88f17d1d14
+2024-02-14T10:20:53.502376Z  INFO ThreadId(45) spawn:chain{chain=osmo-test-5}:client{client=07-tendermint-1968}:connection{connection=connection-1920}:channel{channel=channel-5555}:worker.client.misbehaviour{client=07-tendermint-1968 src_chain=shielded-expedition.88f17d1d14 dst_chain=osmo-test-5}:foreign_client.detect_misbehaviour_and_submit_evidence{client=shielded-expedition.88f17d1d14->osmo-test-5:07-tendermint-1968}: client is valid
+2024-02-14T10:20:56.673774Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:relay{odata=a0a44441 ->Destination @5-5380701; len=1}: assembled batch of 2 message(s)
+2024-02-14T10:20:57.302977Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:relay{odata=a0a44441 ->Destination @5-5380701; len=1}: response(s): 2; Ok:A6F77720864465BE40BE920422264926B563A3984563BE877CDF0354DDD87EF1; Ok:48547B86A3CF42819F710E2B484D0B19C375BED1A8C88B1265D8810FBA22BBDF target_chain=shielded-expedition.88f17d1d14
+2024-02-14T10:20:57.302991Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:relay{odata=a0a44441 ->Destination @5-5380701; len=1}: submitted
+
+
+https://testnet.mintscan.io/osmosis-testnet/txs/D8944FECD7190176DDFD0F711B4005CEA010B1EC9944DAB433A23B264DFF70E7?height=5390907
+
+osmosisd tx ibc-transfer transfer transfer channel-5555 tnam1qzrtckg88nqfqdusg5x6g2pfs0wqawelhsxnp5u6 100uosmo --from coss --keyring-backend test --fees 500uosmo --memo tpknam1qrfdawuufjn07vdq2exy6h5djfsel8254452avz6auxdw9y7r3kpcdz7zcz
+https://testnet.mintscan.io/osmosis-testnet/txs/526C6ED3C617A027CCA44201B338AD8780E29D85A6F8B90362D6FEF186A287F7
+
+2024-02-14T10:52:59.517531Z  INFO ThreadId(92) worker.batch{chain=shielded-expedition.88f17d1d14}:supervisor.handle_batch{chain=shielded-expedition.88f17d1d14}:supervisor.process_batch{chain=shielded-expedition.88f17d1d14}:worker.packet.cmd{src_chain=shielded-expedition.88f17d1d14 src_port=transfer src_channel=channel-39 dst_chain=osmo-test-5}:relay{odata=a6520063 ->Destination @0-13320; len=1}: assembled batch of 2 message(s)
+2024-02-14T10:52:59.826203Z  INFO ThreadId(92) worker.batch{chain=shielded-expedition.88f17d1d14}:supervisor.handle_batch{chain=shielded-expedition.88f17d1d14}:supervisor.process_batch{chain=shielded-expedition.88f17d1d14}:worker.packet.cmd{src_chain=shielded-expedition.88f17d1d14 src_port=transfer src_channel=channel-39 dst_chain=osmo-test-5}:relay{odata=a6520063 ->Destination @0-13320; len=1}: response(s): 1; Ok:961BA1AD46289B2DCD5BE456C8E43C906B440AE46781A3A615E646D9E90C706F target_chain=osmo-test-5
+2024-02-14T10:52:59.826224Z  INFO ThreadId(92) worker.batch{chain=shielded-expedition.88f17d1d14}:supervisor.handle_batch{chain=shielded-expedition.88f17d1d14}:supervisor.process_batch{chain=shielded-expedition.88f17d1d14}:worker.packet.cmd{src_chain=shielded-expedition.88f17d1d14 src_port=transfer src_channel=channel-39 dst_chain=osmo-test-5}:relay{odata=a6520063 ->Destination @0-13320; len=1}: submitted
+
+namadac balance --owner tnam1qzrtckg88nqfqdusg5x6g2pfs0wqawelhsxnp5u6
+naan: 18815.487509
+transfer/channel-39/uosmo: 100
+
+back on shielded account
+https://testnet.ping.pub/osmosis/tx/27708FC514A83AC413D637A53854ED86B44546132FBE877DF2BEE7C87CD0EFED
+
+
+2024-02-14T11:27:38.337276Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:relay{odata=14696f0f ->Destination @5-5381697; len=1}: assembled batch of 2 message(s)
+2024-02-14T11:27:38.922798Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:relay{odata=14696f0f ->Destination @5-5381697; len=1}: response(s): 2; Ok:81D72A9E8B1914A23A37C51B723AD369FE70549F089D08026F68AE39BFA4FD8A; Ok:788B03A7C2B5E53C816657E7A8C9116DBEDA6BF694F8BF9F229779AF4A4185DA target_chain=shielded-expedition.88f17d1d14
+2024-02-14T11:27:38.922823Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:relay{odata=14696f0f ->Destination @5-5381697; len=1}: submitted
+2024-02-14T11:27:46.325100Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}: clearing packets
+2024-02-14T11:27:46.563402Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:schedule_packet_clearing{height=Some(Height { revision: 5, height: 5381700 })}:relay_pending_packets{height=Some(Height { revision: 5, height: 5381699 })}:schedule_recv_packet_and_timeout_msgs{query_height=5-5381699}: pulled packet data for 3 events out of 3 sequences: 3..=5; events.total=3 events.left=0
+2024-02-14T11:27:48.150959Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:relay{odata=cleared/7bd6af1d ->Destination @5-5381699; len=3}: assembled batch of 4 message(s)
+2024-02-14T11:27:49.378757Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:relay{odata=cleared/7bd6af1d ->Destination @5-5381699; len=3}: response(s): 4; Ok:C9BBC84944E59D0F505D4F71FD073F166E7169025B484265F5E561C0E4319538; Ok:48FDE65CC5E6DC55F3374A78F95AC6EC8E940D3925CD173BFCA723B1366643BE; Ok:FE3CAE30BDDA056ECFD948FD4F86F126B5E4D0CE11C7322877FCA3D06DE334EC; Ok:A4F9B717B6EC39ABC533C333EEEBB6B216ED0D64029311F873A4136A149F07ED target_chain=shielded-expedition.88f17d1d14
+2024-02-14T11:27:49.378792Z  INFO ThreadId(103) worker.batch{chain=osmo-test-5}:supervisor.handle_batch{chain=osmo-test-5}:supervisor.process_batch{chain=osmo-test-5}:worker.packet.cmd{src_chain=osmo-test-5 src_port=transfer src_channel=channel-5555 dst_chain=shielded-expedition.88f17d1d14}:relay{odata=cleared/7bd6af1d ->Destination @5-5381699; len=3}: submitted
+
+PROOF OF OWNERSHIP
+https://testnet.mintscan.io/osmosis-testnet/txs/69A963264ACF1E3B38D8E97C7B5238C48716BCB5CE9B87086622315C14461CBE
+
