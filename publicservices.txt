@@ -1,0 +1,11 @@
+Request to add seed
+https://github.com/anoma/namada-shielded-expedition/pull/271
+
+Published RPC
+https://knowabl.notion.site/Shielded-Expedition-Support-f3e93cec61fd4affb3399f2758a611ef
+
+RPC
+https://namada-testnet-rpc.stakeandrelax.net
+
+Indexer:
+https://namada-testnet-indexer.stakeandrelax.net
