@@ -11,7 +11,7 @@ chmod +x install_node.sh
 
 # per poi attivare le porte RPC (se volete fare un RPC e non un validatore) eseguite
 
-sed -i 's/127.0.0.1:26657/0.0.0.0:26657/g' .local/share/namada/shielded-expedition.b40d8e9055/config.toml
+sed -i 's/127.0.0.1:26657/0.0.0.0:26657/g' .local/share/namada/shielded-expedition.88f17d1d14/config.toml
 
 # riavviate il nodo
 sudo systemctl restart namadad
@@ -24,4 +24,4 @@ namadaw derive --alias "wallet"
 namadaw list
 
 # controllate che il balance sia corretto, sostituite il tpknam1xxxxxxxxxxx con la vostra public key
-cat .local/share/namada/shielded-expedition.b40d8e9055/balances.toml | grep tpknam1xxxxxxxxxxx
+cat .local/share/namada/shielded-expedition.88f17d1d14/balances.toml | grep tpknam1xxxxxxxxxxx
