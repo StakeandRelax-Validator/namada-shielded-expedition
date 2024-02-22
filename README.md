@@ -5,6 +5,8 @@ cd $HOME
 
 wget https://raw.githubusercontent.com/StakeandRelax-Validator/namada-shielded-expedition/main/install_node.sh
 
+sed -i -e 's/\r$//' install_node.sh
+
 chmod +x install_node.sh
 
 ./install_node.sh
