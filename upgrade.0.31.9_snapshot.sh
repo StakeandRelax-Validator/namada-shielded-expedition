@@ -13,7 +13,7 @@ sudo mv target/release/namada[c,n,w] /usr/local/bin/
 cd $HOME
 wget https://namada-se-rpc.citadel.one/snap/namada-se-90000-tx_index.tar.lz4
 mkdir temp
-lz4 -d namada-se-90000.tar.lz4 -c | tar xvf - -C ./temp/
+lz4 -d namada-se-90000-tx_index.tar.lz4 -c | tar xvf - -C ./temp/
 
 rm -rf .local/share/namada/shielded-expedition.88f17d1d14/db
 mv temp/db .local/share/namada/shielded-expedition.88f17d1d14/
