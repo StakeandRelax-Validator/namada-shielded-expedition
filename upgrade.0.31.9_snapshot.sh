@@ -9,6 +9,7 @@ git checkout $NAMADA_TAG
 make build-release
 sudo mv target/release/namada /usr/local/bin/
 sudo mv target/release/namada[c,n,w] /usr/local/bin/
+cp /usr/local/bin/namada* /home/stakeval/.cargo/bin/
 
 cd $HOME
 wget https://namada-se-rpc.citadel.one/snap/namada-se-90000-tx_index.tar.lz4
