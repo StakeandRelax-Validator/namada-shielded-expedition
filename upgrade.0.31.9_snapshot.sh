@@ -1,3 +1,4 @@
+#!/bin/bash
 NAMADA_TAG="v0.31.9"
 
 sudo systemctl stop namadad
