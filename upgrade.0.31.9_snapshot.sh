@@ -23,4 +23,6 @@ rm -rf .local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/
 mv temp/data/ .local/share/namada/shielded-expedition.88f17d1d14/cometbft/
 mv .local/share/namada/shielded-expedition.88f17d1d14/cometbft/priv_validator_state.json .local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/
 
+rm namada-se-90000-tx_index.tar.lz4
+
 sudo systemctl start namadad
