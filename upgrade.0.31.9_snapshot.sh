@@ -4,6 +4,7 @@ NAMADA_TAG="v0.31.9"
 sudo systemctl stop namadad
 
 cd namada
+git fetch
 git checkout $NAMADA_TAG
 make build-release
 sudo mv target/release/namada /usr/local/bin/
