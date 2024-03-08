@@ -1,4 +1,7 @@
 NAMADA_TAG="v0.31.9"
+
+sudo systemctl stop namadad
+
 cd namada
 git checkout $NAMADA_TAG
 make build-release
@@ -17,3 +20,5 @@ mv .local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/priv_validat
 rm -rf .local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/
 mv temp/data/ .local/share/namada/shielded-expedition.88f17d1d14/cometbft/
 mv .local/share/namada/shielded-expedition.88f17d1d14/cometbft/priv_validator_state.json .local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/
+
+sudo systemctl start namadad
