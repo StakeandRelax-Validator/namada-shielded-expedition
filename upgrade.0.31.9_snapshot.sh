@@ -24,6 +24,10 @@ rm -rf .local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/
 mv temp/data/ .local/share/namada/shielded-expedition.88f17d1d14/cometbft/
 mv .local/share/namada/shielded-expedition.88f17d1d14/cometbft/priv_validator_state.json .local/share/namada/shielded-expedition.88f17d1d14/cometbft/data/
 
+sed -i 's/timeout_propose_delta = "500ms"/timeout_propose_delta = "0s"/g' $HOME/.local/share/namada/shielded-expedition.88f17d1d14/config.toml
+sed -i 's/timeout_prevote_delta = "500ms"/timeout_prevote_delta = "0s"/g' $HOME/.local/share/namada/shielded-expedition.88f17d1d14/config.toml
+sed -i 's/timeout_precommit_delta = "500ms"/timeout_precommit_delta = "0s"/g' $HOME/.local/share/namada/shielded-expedition.88f17d1d14/config.toml
+
 rm namada-se-90000-tx_index.tar.lz4
 
 sudo systemctl start namadad
